@@ -277,7 +277,7 @@ $ iptables -I DOCKER-USER -i <EXTERNAL_INTERFACE> ! -s <SOURCE_IP> -j DROP
 ```
 > Check `EXTERNAL_INTERFACE` and `SOURCE_IP` using `ip addr` 
 
-    [Docker and iptables](https://docs.docker.com/network/iptables/)
+[Docker and iptables](https://docs.docker.com/network/iptables/)
 
 - Verify the change
 ```sh
