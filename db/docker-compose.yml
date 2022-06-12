@@ -1,0 +1,31 @@
+networks:
+  backend:
+    external: true
+
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysqldata:/var/lib/mysql
+    restart: unless-stopped
+    environment:
+      #- MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=root_password
+    networks:
+      - backend
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    ports:
+      - 81:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+        # - PMA_ABSOLUTE_URI=https://x.x.x.x/pma/ Use FQDN or public IP if you want to configure it with reverse proxy
+    restart: unless-stopped
+    networks:
+      - backend

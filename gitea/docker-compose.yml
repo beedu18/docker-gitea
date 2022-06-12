@@ -1,0 +1,27 @@
+networks:
+  backend:
+    external: true
+
+services:
+  server:
+    image: gitea/gitea
+    container_name: gitea
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      - GITEA__database__DB_TYPE=mysql
+      - GITEA__database__HOST=mysql:3306
+      - GITEA__database__NAME=gitea
+      - GITEA__database__USER=gitea
+      - GITEA__database__PASSWD=gitea
+        # - ROOT_URL='https://x.x.x.x/gitea/' USE if you want to set up reverse proxy
+    restart: always
+    networks:
+      - backend
+    volumes:
+      - ./gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 127.0.0.1:82:3000 # will not expose port 82 to external IPs
+      - 83:22
