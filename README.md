@@ -165,7 +165,7 @@ $ openssl req -newkey rsa:2048 -nodes -days 365 -x509 \
 $ vim ~/nginx/docker-compose.yml
 ```
 
-[Nginx `docker-compose.yml`]()
+[Nginx `docker-compose.yml`](https://raw.githubusercontent.com/beedu18/docker-gitea/main/nginx/docker-compose.yml)
 
 - Running the stack
 ```sh
@@ -187,7 +187,7 @@ $ dc down
 ```sh
 $ vim ~/nginx/nginx/conf.d/default.conf 
 ```
-[default.conf]()
+[default.conf](https://raw.githubusercontent.com/beedu18/docker-gitea/main/nginx/default.conf)
 
 ### Configuring MySql and phpMyAdmin 
 - Add a backend network
@@ -198,7 +198,7 @@ $ d network create backend
 ```sh
 $ vim ~/db/docker-compose.yml
 ```
-[Database `docker-compose.yml`]()
+[Database `docker-compose.yml`](https://raw.githubusercontent.com/beedu18/docker-gitea/main/db/docker-compose.yml)
 
 - Start the stack
 ```sh
@@ -216,7 +216,7 @@ $ curl localhost:<HOST_PORT>
 ```sh
 $ vim ~/gitea/docker-compose.yml
 ```
-[Gitea `docker-compose.yml`]()
+[Gitea `docker-compose.yml`](https://raw.githubusercontent.com/beedu18/docker-gitea/main/gitea/docker-compose.yml)
 
 - Start the stack
 ```sh
@@ -234,7 +234,7 @@ $ curl localhost:<HOST_PORT>
 ```sh
 $ vim vim ~/gitea/gitea/gitea/conf/app.ini
 ```
-[Gitea `app.ini`]()
+[Gitea `app.ini`](https://raw.githubusercontent.com/beedu18/docker-gitea/main/gitea/app.ini)
 
 - Restart the stack
 ```sh
