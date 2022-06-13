@@ -17,7 +17,7 @@
 
 ![image](assets/demo.gif)
 
-This repository contains `docker-compose.yml` files used for setting up a self hosted version control server with the official [Gitea Image](https://hub.docker.com/r/gitea/gitea). The Video tutorial for the same can be found [here]()
+This repository contains `docker-compose.yml` files used for setting up a self hosted version control server with the official [Gitea Image](https://hub.docker.com/r/gitea/gitea). The Video tutorial for the same can be found [here](https://www.youtube.com/watch?v=w57lDNxBcvU)
 
 ### Built With
 
@@ -290,4 +290,4 @@ $ iptables -L DOCKER-USER
 <!-- REFERENCE -->
 ## Video Tutorial
 
-[NoobDev EP03 | Exploring Docker | Self Hosted Version Control with Gitea | Nginx as Reverse Proxy | Docker and iptables]()
+[NoobDev EP 03 - Exploring Docker | Self Hosted Version Control | Reverse Proxy | firewall & iptables](https://www.youtube.com/watch?v=w57lDNxBcvU)
